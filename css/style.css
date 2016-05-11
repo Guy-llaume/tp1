@@ -22,6 +22,7 @@
 }
 
 
+
 @media screen and (max-width: 480px){
     body{
         background-color: yellow;
@@ -42,4 +43,13 @@
     body{
         background-color: green;
     }
+}
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 2),  
+    only screen and (-moz-min-device-pixel-ratio: 2),  
+    only screen and (-o-min-device-pixel-ratio: 4/2),  
+    only screen and (min-device-pixel-ratio: 2) {  
+        #logoiut {  
+            background: url(../img/logo-iut.jpg);
+        }  
 }
