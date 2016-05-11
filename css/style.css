@@ -1,5 +1,13 @@
+html{ 
+    font-size: 62.5%; 
+} 
+h1{
+    font-size: 8vw; /* fera tj 8% de la taille max */
+}
+
 *{
     max-width: 100%;
+    font-size: 4vw; 
 }
 
 #text1{
@@ -14,7 +22,7 @@
 
 #logoiut{
     background: url(../img/logo-iut2.jpg);
-    display: block;
+    display: block; 
     width: 300px;
     height: 150px;
     margin-left: auto;
@@ -26,23 +34,27 @@
 @media screen and (max-width: 480px){
     body{
         background-color: yellow;
-
+    }
+    h1{
     }
 }
 @media screen and (min-width: 481px) and (max-width: 767px){
     body{
         background-color: blue;
     }
+
 }
 @media screen and (min-width: 768px) and (max-width: 979px){
     body{
         background-color: violet;
     }
+
 }
 @media screen and (min-width: 1200px){
     body{
         background-color: green;
     }
+
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),  
@@ -53,9 +65,4 @@
             background: url(../img/logo-iut.jpg);
             background-size: 100% auto;
         }  
-        body{
-            background-color: coral;
-
-        }
-
 }
