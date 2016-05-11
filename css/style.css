@@ -46,11 +46,20 @@
 }
 
 @media only screen and (-Webkit-min-device-pixel-ratio: 1.5),  
- only screen and (-moz-min-device-pixel-ratio: 1.5),  
- only screen and (-o-min-device-pixel-ratio: 3/2),  
- only screen and (min-device-pixel-ratio: 1.5) {  
-   #logoiut {  
-     background-color:red; 
-       background: ();
-   }  
- }
+    only screen and (-moz-min-device-pixel-ratio: 1.5),  
+    only screen and (-o-min-device-pixel-ratio: 3/2),  
+    only screen and (min-device-pixel-ratio: 1.5) {  
+        #logoiut {  
+            background: url(../img/logo-iut.jpg);
+            display: block;
+            width: 300px;
+            height: 150px;
+            margin-left: auto;
+            margin-right: auto;
+        }  
+        body{
+            background-color: coral;
+
+        }
+
+}
