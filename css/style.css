@@ -50,7 +50,7 @@
     only screen and (-o-min-device-pixel-ratio: 4/2),  
     only screen and (min-device-pixel-ratio: 2) {  
         #logoiut {  
-            background: url(../img/logo-iut.jpg);
+            background: url(../img/log-iut.jpg);
             display: block;
             width: 300px;
             height: 150px;
