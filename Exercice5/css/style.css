@@ -50,7 +50,7 @@ header{
     margin-right : 10px;
 }
 
-#menu1 li:first-child:before, header li:last-child:before{
+#menu1 li:first-child:before, #menu1 li:last-child:before{
     content : "";
 }
 
@@ -159,7 +159,7 @@ footer{
         margin-right: auto;
     }
 
-    header ul{
+    #menu1 ul{
         margin-top: 10px;
         display: block;
         margin-left: auto;
@@ -170,13 +170,13 @@ footer{
         border-bottom:solid 0px black; 
     }
 
-    header li{
+    #menu1 li{
         width: 24%;
         text-align: center;
         position: relative;
     }
 
-    header li:before {
+    #menu1 li:before {
         content : "|";
         color : black;
         position: absolute;
