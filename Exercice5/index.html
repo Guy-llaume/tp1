@@ -1,88 +1,134 @@
 <!doctype html>
 <html lang="fr">
-    <!--<html lang="fr" manifest="site.manifest"> -->
     <head>
         <meta charset="utf-8">
         <title>M4105C : Un super module</title>
         <link rel="stylesheet" href="css/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
         <link rel="icon" type="image/png" href="img/Sans%20titre%202.png" />
+        <script type="text/javascript" src="js/jquery.js"></script> 
+
         <link rel="apple-touch-icon" type="image/png" href="img/logoiphone.png" />
-
-
-
     </head>
 
 
     <body>
-        <h1>M4105C : Un super module</h1>
+        <div id="in">
+            <header>
+                <img class="logo" src="img/logo-iut.jpg">
+                <div id="tel">
+                    <a href=#><img src="img/tel.png"></a>
+                </div>
+                <div id="menu1">
+                    <ul>
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#">Titre 1</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><input type="text" value="Rechercher"></li>
+                    </ul>
+                </div>
 
-        <table>
-            <tr>
-                <th>Sport</th>
-                <td>Tennis de table</td>
-                <td>Football</td>
-                <td>Poney</td>
-                <td>Curling</td>
-                <td>Patinnage artisitque</td>
-                <td>Basketball</td>
-            </tr>
-            <tr>
-                <th>Competitions</th>
-                <td>Jeux olympiques</td>
-                <td>Championnats d'Europe</td>
-                <td>Coupe du monde</td>
-                <td>Championnats regionnaux</td>
-                <td>Coupe district</td>
-                <td>NBA</td>
-            </tr>
-        </table>
+                <div class="mobile-nav">
+                    <div class="menu-btn" id="menu-btn">
+                        <div></div>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="responsive-menu">
+                        <ul>
+                            <li><a href="#">Accueil</a></li>
+                            <li><a href="#">Titre 1</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </header>
+
+            <div id="banderole"> 
+            </div>
+
+            <script type="text/javascript">
+                jQuery(function($){
+                    $( '.menu-btn' ).click(function(){
+                        $('.responsive-menu').toggleClass('expand')
+                    })
+                })
+            </script>
 
 
+            <div id="dutexte">
+                <h1>Titre h1</h1>
+                <br/>
+                <p>Quod si rectum statuerimus vel concedere amicis, quidquid velint, vel impetrare ab iis, quidquid velimus, perfecta quidem sapientia si simus, nihil habeat res vitii; sed loquimur de iis amicis qui ante oculos sunt, quos vidimus aut de quibus memoriam accepimus, quos novit vita communis. Ex hoc numero nobis exempla sumenda sunt, et eorum quidem maxime qui ad sapientiam proxime accedunt.</p>
+            </div>
+
+            <div id="imgh">
+                <img src="img/h.png" alt="H">
+                <h2>H</h2>
+                H est la 8e lettre
+            </div><div id="imgt">
+            <img src="img/t.png" alt="T">
+            <h2>T</h2>
+            T est la 8e lettre
+            </div><div id="imgm">
+            <img src="img/m.png" alt="M">
+            <h2>M</h2>
+            M est la 8e lettre
+            </div><div id="imgl">
+            <img src="img/l.png" alt="L">
+            <h2>L</h2>
+            L est la 8e lettre
+            </div> 
 
 
+            <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+            <div id="map">
+                <h1>Google Map</h1>
 
+                <div id='gmap_canvas'></div>
 
-        <div id=logoiut></div>
-           <div id=bg></div>
-        
-        <section>
-            <h1>Titre</h1>
-            <input type="text" name="nom" placeholder="Nom"/>
-            <input type="date" name="date"/>
-            <input type="number" name="age" placeholder="Age"/>
-            <input type="url" name="facebook" placeholder="http://facebook.com"/>
-            <input type="email" name="email" placeholder="example@example.fr"/>
-            <input type="tel" name="telephone" placeholder="06xxxxxxxxxx"/>
-        </section>
+                <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
+            </div>
+            <script type='text/javascript'>
+                function init_map(){
+                    var myOptions = {zoom:12,center:new google.maps.LatLng(50.95129000000001,1.8586860000000343),mapTypeId: google.maps.MapTypeId.ROADMAP};
+                    map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+                    marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(50.95129000000001,1.8586860000000343)});
+                    google.maps.event.addListener(marker, 'click', function(){
+                        infowindow.open(map,marker);
+                    });
+                    ;}
+                google.maps.event.addDomListener(window, 'load', init_map);
+            </script>
 
-        <section>
-            <h1>Titre</h1>
-            <img src="img/mairie-de-calais.jpg" alt="marie de calais">
-        </section>
+            <div id="formu">
+                <h1>Formulaire</h1>
+                <br/>
+                <div id=tableau>
+                    <form>
+                        <input class="double" type="text" placeholder="Prenom">
+                        <input class="double" type="text" placeholder="Nom">
+                        <input class="double" type="date">
+                        <input class="double" type="text" placeholder="Ville de naissance">
+                        <input class="simple" type="mail" placeholder="exemple@exemple.fr">
+                        <input class="simple" type="file" placeholder="Photo">
+                        <textarea  placeholder="Message"></textarea>
+                        <input class='envoyer' type="submit" value="Envoyer">
 
-        <header>
-            <p>texte du header</p>
-        </header>
-        <section id="text1">
-            <h1>Titre</h1>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rhoncus lectus sit amet rutrum condimentum. Ut sagittis mauris quis orci dignissim efficitur. Donec cursus viverra placerat. Sed porta, nunc tempus tempus fringilla, erat nisl ornare ligula, feugiat convallis nisl nibh quis libero. Duis at ultrices sem, et sollicitudin metus. Mauris tincidunt dolor bibendum, tempor velit eget, fringilla enim. Nunc vitae nunc vitae lorem sodales interdum. Maecenas facilisis pellentesque mi.
-        </section>
+                    </form>
+                </div>
+            </div>
 
-        <section id="text2">
-            <h1>Titre</h1>
-            Nam fringilla tortor diam, et efficitur felis porta in. Sed laoreet justo non consectetur luctus. Suspendisse faucibus et orci vitae faucibus. Nunc pharetra nibh ac maximus elementum. Morbi id fermentum libero. Nullam bibendum at eros sit amet viverra. Aliquam pretium, ex ac vestibulum porttitor, enim libero congue neque, a finibus nulla tortor ac urna. Maecenas sagittis neque purus, eget porttitor nisl convallis non. Duis et varius dui. Vestibulum dolor leo, fringilla sit amet varius a, bibendum nec sem. Cras at leo eu arcu dictum rutrum id ut magna. Sed aliquet interdum mollis. Maecenas at auctor dolor, in vehicula tellus.
-        </section>
+            <br/><br/>
+            <footer>
+                <br/>
+                <p>Deloget Guillaume Groupe PEL</p>
+                <br/>
 
-        <section id="text3">
-            <h1>Titre</h1>
-            Aenean luctus quam vel mauris porttitor rhoncus. Integer porttitor molestie nibh. Nam ut egestas leo, vitae dapibus lacus. Duis euismod auctor massa a consectetur. Ut at libero lacus. Suspendisse fermentum lacus vitae eros aliquam egestas. Suspendisse ornare dolor ac nunc ullamcorper, nec consequat eros hendrerit.
-            <br/>
-            <img src="img/calais.jpg" alt="Calais"> 
-        </section>
-
-        <footer>
-            <p>texte du footer</p>
-        </footer>
+            </footer>
+        </div>
     </body>
 </html>
