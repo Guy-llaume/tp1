@@ -60,30 +60,9 @@
             <div id="banderole"> 
             </div>
 
-            <div id="log"></div>
-
-            <img class="logoaxe" src="img/logo-iut.jpg">
 
 
-            <script type="text/javascript">
-
-                if(window.DeviceOrientationEvent) {
-                    window.addEventListener("deviceorientation", process, false);
-                } else {
-                    // Le navigateur ne supporte pas l'événement deviceorientation
-                }
-
-                function process(event) {
-                    var alpha = event.alpha;
-                    var beta = event.beta;
-                    var gamma = event.gamma;
-                    document.getElementById("log").innerHTML = "<ul><li>Alpha : " + alpha + "</li><li>Beta : " + beta + "</li><li>Gamma : " + gamma + "</li></ul>"; 
-                    $(".logoaxe").css("transform","rotate("+gamma+"deg)");
-
-
-                }
-
-            </script>          
+                   
 
             <script type="text/javascript">
                 jQuery(function($){
@@ -141,6 +120,9 @@
                     </form>
                 </div>
             </div>
+            
+            <div id="log"></div>
+            <img class="logoaxe" src="img/logo-iut.jpg">
 
             <br/><br/>
             <footer>
@@ -185,7 +167,24 @@
                 }
                 previousPosition = position;
             };    
-        </script>
+  
+                if(window.DeviceOrientationEvent) {
+                    window.addEventListener("deviceorientation", process, false);
+                } else {
+                    // Le navigateur ne supporte pas l'événement deviceorientation
+                }
+
+                function process(event) {
+                    var alpha = event.alpha;
+                    var beta = event.beta;
+                    var gamma = event.gamma;
+                    document.getElementById("log").innerHTML = "<ul><li>Alpha : " + alpha + "</li><li>Beta : " + beta + "</li><li>Gamma : " + gamma + "</li></ul>"; 
+                    $(".logoaxe").css("transform","rotate("+gamma+"deg)");
+
+
+                }
+
+            </script>   
 
 
     </body>
