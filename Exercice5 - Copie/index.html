@@ -61,6 +61,10 @@
             </div>
 
             <div id="log"></div>
+
+            <img class="logoaxe" src="img/logo-iut.jpg">
+
+
             <script type="text/javascript">
 
                 if(window.DeviceOrientationEvent) {
@@ -74,6 +78,7 @@
                     var beta = event.beta;
                     var gamma = event.gamma;
                     document.getElementById("log").innerHTML = "<ul><li>Alpha : " + alpha + "</li><li>Beta : " + beta + "</li><li>Gamma : " + gamma + "</li></ul>"; 
+                    $(".logoaxe").css("image-orientation:",gamma);
                 }
 
             </script>          
