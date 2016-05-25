@@ -2,9 +2,12 @@ div {
     position : relative ;
 }
 *{
-    max-width: 100%;
     margin : 0px;
     padding : 0px;
+}
+body{
+    max-width: 100%;
+
 }
 
 ul,li{
@@ -87,7 +90,7 @@ header{
 }
 
 #map{
-    overflow: hidden;
+    overflow: hidden; 
     border-right: solid 3px black;
     background-color: green;
 }
@@ -149,6 +152,9 @@ footer{
 /************************************************************/
 
 @media screen and (min-width: 481px) and (max-width: 979px){
+    #in{
+        width: 100%
+    }
     body{
         background-color: violet;
     }
@@ -216,6 +222,10 @@ footer{
 /************************************************************/
 
 @media screen and (max-width: 480px){
+    #in{
+        width: 100%
+    }
+
     body{
         background-color: yellow;
     }
